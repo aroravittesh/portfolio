@@ -112,7 +112,7 @@ export default function Hero() {
             { href: `mailto:${PERSONAL_INFO.email}`, icon: "fas fa-envelope" },
             { href: PERSONAL_INFO.linkedIn, icon: "fab fa-linkedin" },
             { href: PERSONAL_INFO.github, icon: "fab fa-github" },
-            { href: PERSONAL_INFO.leetcode, icon: "fas fa-code" },
+            { href: PERSONAL_INFO.leetcoxde, icon: "fas fa-code" },
           ].map((social, index) => (
             <motion.a
               key={index}
