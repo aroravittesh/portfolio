@@ -9,7 +9,15 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-cosmic-dark text-white relative">
       <ParticleBackground />
-      <Navigation />
+     
+<div className="w-full flex justify-center">
+  <div className="mr-28">
+    <Navigation />
+  </div>
+</div>
+
+
+
       
       <main>
         <Hero />
@@ -22,7 +30,7 @@ export default function Home() {
       <footer className="bg-cosmic-purple/20 py-8 border-t border-gray-800 relative z-10">
         <div className="container mx-auto px-6 text-center">
           <p className="text-gray-400">
-            © 2024 Vittesh Arora. Crafted with 
+            © 2025 Vittesh Arora. Crafted with 
             <span className="text-red-500 mx-1">❤️</span>
             and cutting-edge tech.
           </p>

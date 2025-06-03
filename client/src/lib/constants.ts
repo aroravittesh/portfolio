@@ -1,24 +1,23 @@
 export const PERSONAL_INFO = {
   name: "Vittesh Arora",
   title: "Full Stack Developer",
-  subtitle: "MERN Stack Specialist & AI Enthusiast",
+  subtitle: "MERN Stack Specialist",
   email: "vittesharora04@gmail.com",
   phone: "+91-9460947980",
-  location: "Bengaluru, India",
+  location: "Bengaluru, Karnataka, India",
   university: "Bennett University",
   degree: "B.Tech Computer Science Engineering",
   expectedGraduation: "June 2026",
   problemsSolved: "320+",
-  linkedIn: "#",
-  github: "#",
-  leetcode: "#",
-  resume: "/resume"
+  linkedIn: "https://linkedin.com/in/vittesh-arora",
+  github: "https://github.com/aroravittesh",
+  leetcode: "https://leetcode.com/u/vittesharora",
+  resume: "https://drive.google.com/file/d/17aKdF-oCK0xv0zh1BW3gRanHly_E9nCu/view?usp=sharing"
 };
 
 export const TYPING_TEXTS = [
   "Full Stack Developer",
   "MERN Stack Specialist", 
-  "AI Enthusiast",
   "Problem Solver",
   "Tech Innovator"
 ];
@@ -100,7 +99,7 @@ export const PROJECTS = [
   },
   {
     id: "cookie",
-    title: "Cookie Chatbot",
+    title: "Cookie",
     subtitle: "AI Chatbot for College FAQs and Automation",
     description: "An intelligent AI-powered chatbot solution designed to automate college-related queries and administrative tasks. The system handles over 100 FAQs with high accuracy and contextual understanding.",
     image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",

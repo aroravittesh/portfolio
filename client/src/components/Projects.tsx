@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
-import { PROJECTS, TECHNOLOGIES } from "@/lib/constants";
+import { PROJECTS } from "@/lib/constants";
 import ProjectModal from "./ProjectModal";
 import { ExternalLink, Github } from "lucide-react";
 
@@ -9,7 +9,7 @@ export default function Projects() {
   const { ref, isIntersecting } = useIntersectionObserver({
     threshold: 0.1,
   });
-  
+
   const [selectedProject, setSelectedProject] = useState<typeof PROJECTS[0] | null>(null);
 
   const getCategoryColor = (category: string) => {
@@ -36,6 +36,9 @@ export default function Projects() {
     };
     return colors[tech] || "gray-400";
   };
+
+  const formatRepoName = (title: string) =>
+    title.toLowerCase().replace(/\s+/g, "-");
 
   return (
     <>
@@ -74,7 +77,7 @@ export default function Projects() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-cosmic-dark/60 to-transparent" />
                 </div>
-                
+
                 <div className="p-6">
                   <div className="flex items-center mb-3">
                     <i className={`fas fa-${project.category === 'Sustainability' ? 'leaf' : project.category === 'Mobile App' ? 'mobile-alt' : 'robot'} text-${getCategoryColor(project.category)} mr-2`}></i>
@@ -82,14 +85,14 @@ export default function Projects() {
                       {project.category}
                     </span>
                   </div>
-                  
+
                   <h3 className={`font-orbitron text-xl font-bold mb-3 text-${getCategoryColor(project.category)}`}>
                     {project.title}
                   </h3>
                   <p className="text-gray-300 text-sm mb-4 line-clamp-2">
                     {project.subtitle}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.slice(0, 4).map((tech) => (
                       <span
@@ -100,13 +103,18 @@ export default function Projects() {
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
                     <button className={`text-${getCategoryColor(project.category)} hover:text-white transition-colors duration-300 flex items-center text-sm`}>
                       <ExternalLink className="w-4 h-4 mr-1" />
                       View Details
                     </button>
-                    <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
+                    <a
+                      href={`https://github.com/aroravittesh/${formatRepoName(project.title)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors duration-300"
+                    >
                       <Github className="w-5 h-5" />
                     </a>
                   </div>
@@ -114,8 +122,6 @@ export default function Projects() {
               </motion.div>
             ))}
           </div>
-
-
         </div>
       </section>
 
