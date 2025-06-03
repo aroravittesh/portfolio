@@ -153,10 +153,14 @@ export default function Navigation() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: isVisible ? 0 : -100, opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed top-6 left-1/2 transform -translate-x-1/2 z-[9999] w-full px-4"
+      className="fixed top-6 left-0 right-0 z-[9999] px-4"
+      style={{ pointerEvents: isVisible ? 'auto' : 'none' }}
     >
       {/* Desktop Nav */}
-      <div className="hidden md:flex glass rounded-full px-8 py-3 items-center justify-center space-x-6">
+      <div
+        className="hidden md:flex glass rounded-full px-8 py-3 items-center space-x-6"
+        style={{ marginLeft: 'auto', marginRight: 'auto', width: 'fit-content' }}
+      >
         {navItems.map((item) => (
           <button
             key={item.id}
@@ -177,7 +181,7 @@ export default function Navigation() {
       </div>
 
       {/* Mobile Menu Toggle */}
-      <div className="md:hidden flex justify-center pr-6 -ml-5">
+      <div className="md:hidden flex justify-end pr-6">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="glass rounded-full p-3 text-white"
