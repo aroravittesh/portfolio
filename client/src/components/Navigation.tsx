@@ -144,7 +144,7 @@ export default function Navigation() {
   const navItems = [
     { id: "home", label: "Home" },
     { id: "projects", label: "Projects" },
-    { id: "about", label: "About" },
+    { id: "about", label: "Skills" },
     { id: "contact", label: "Contact" },
   ];
 
