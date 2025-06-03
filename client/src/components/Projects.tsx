@@ -106,39 +106,16 @@ export default function Projects() {
                       <ExternalLink className="w-4 h-4 mr-1" />
                       View Details
                     </button>
-                    <button className="text-gray-400 hover:text-white transition-colors duration-300">
+                    <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
                       <Github className="w-5 h-5" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Technologies Section */}
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={isIntersecting ? { y: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-center"
-          >
-            <h3 className="font-orbitron text-2xl font-bold mb-8 text-cosmic-cyan">Technologies I Work With</h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              {TECHNOLOGIES.map((tech, index) => (
-                <motion.div
-                  key={tech.name}
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={isIntersecting ? { scale: 1, opacity: 1 } : {}}
-                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  className={`glass rounded-full px-6 py-3 hover:bg-${tech.color}/20 transition-all duration-300`}
-                >
-                  <i className={`${tech.icon} text-${tech.color} mr-2`}></i>
-                  {tech.name}
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+
         </div>
       </section>
 

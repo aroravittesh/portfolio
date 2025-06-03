@@ -4,16 +4,15 @@ export const PERSONAL_INFO = {
   subtitle: "MERN Stack Specialist & AI Enthusiast",
   email: "vittesharora04@gmail.com",
   phone: "+91-9460947980",
-  location: "Greater Noida, UP, India",
+  location: "Bengaluru, India",
   university: "Bennett University",
   degree: "B.Tech Computer Science Engineering",
-  cgpa: "8.30",
   expectedGraduation: "June 2026",
-  hackathonRank: "88th",
   problemsSolved: "320+",
   linkedIn: "#",
   github: "#",
-  leetcode: "#"
+  leetcode: "#",
+  resume: "/resume"
 };
 
 export const TYPING_TEXTS = [
@@ -28,32 +27,27 @@ export const SKILLS = [
   {
     category: "Programming Languages",
     icon: "fas fa-code",
-    skills: [
-      { name: "JavaScript/TypeScript", level: 90 },
-      { name: "Python", level: 85 },
-      { name: "C++", level: 80 },
-      { name: "Java", level: 75 }
-    ]
+    skills: ["C++", "Python", "Java", "JavaScript", "TypeScript"]
   },
   {
-    category: "Frontend Development", 
-    icon: "fas fa-paint-brush",
-    skills: [
-      { name: "React.js", level: 90 },
-      { name: "React Native", level: 85 },
-      { name: "HTML/CSS", level: 95 },
-      { name: "Tailwind CSS", level: 90 }
-    ]
+    category: "Frameworks & Libraries", 
+    icon: "fas fa-layer-group",
+    skills: ["React.js", "React Native", "Node.js", "Express.js", "HTML", "CSS", "Tailwind"]
   },
   {
-    category: "Backend Development",
-    icon: "fas fa-server", 
-    skills: [
-      { name: "Node.js", level: 85 },
-      { name: "Express.js", level: 85 },
-      { name: "MongoDB", level: 80 },
-      { name: "MySQL", level: 75 }
-    ]
+    category: "Databases",
+    icon: "fas fa-database", 
+    skills: ["MySQL", "MongoDB"]
+  },
+  {
+    category: "Cloud & Tools",
+    icon: "fas fa-cloud", 
+    skills: ["Google Cloud Platform (GCP)", "VS Code", "Git", "GitHub", "Microsoft Office"]
+  },
+  {
+    category: "Technical Expertise",
+    icon: "fas fa-cogs", 
+    skills: ["Data Structures & Algorithms", "OOPS", "Software Engineering", "Operating Systems", "REST APIs", "Machine Learning Basics"]
   }
 ];
 
@@ -137,21 +131,21 @@ export const ACHIEVEMENTS = [
     color: "cosmic-cyan"
   },
   {
-    value: "8.30",
-    label: "CGPA",
+    value: "3+",
+    label: "Major Projects",
+    description: "MERN Stack & AI",
+    color: "cosmic-coral"
+  },
+  {
+    value: "2026",
+    label: "Expected Graduation",
     description: "Bennett University",
     color: "cosmic-teal"
   },
   {
-    value: "88th",
-    label: "Hackathon Rank",
-    description: "SmartBU Hackathon",
-    color: "cosmic-coral"
-  },
-  {
-    value: "3+",
-    label: "Major Projects",
-    description: "MERN Stack & AI",
+    value: "1+",
+    label: "Years Experience",
+    description: "Full Stack Development",
     color: "purple-400"
   }
 ];

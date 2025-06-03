@@ -13,7 +13,7 @@ export default function About() {
   useEffect(() => {
     if (isIntersecting) {
       ACHIEVEMENTS.forEach((achievement) => {
-        const target = achievement.value === "8.30" ? 8.30 : parseInt(achievement.value);
+        const target = parseInt(achievement.value);
         animateValue(achievement.label, target);
       });
     }
@@ -33,8 +33,7 @@ export default function About() {
   };
 
   const formatValue = (label: string, value: number) => {
-    if (label === "CGPA") return value.toFixed(2);
-    if (label === "Hackathon Rank") return `${Math.floor(value)}th`;
+    if (label === "Expected Graduation") return `${Math.floor(value)}`;
     if (label === "Problems Solved") return `${Math.floor(value)}+`;
     return `${Math.floor(value)}+`;
   };
@@ -49,74 +48,47 @@ export default function About() {
           className="text-center mb-16"
         >
           <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">About & Skills</span>
+            <span className="gradient-text">Skills & Experience</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Passionate developer with expertise in full-stack development, AI integration, and modern web technologies. 
-            Solved {PERSONAL_INFO.problemsSolved} coding problems and ranked {PERSONAL_INFO.hackathonRank} in SmartBU Hackathon.
+            Solved {PERSONAL_INFO.problemsSolved} coding problems across multiple platforms.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Skills Visualization */}
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Skills Section */}
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={isIntersecting ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
           >
-            <div className="glass-dark rounded-2xl p-8">
-              <h3 className="font-orbitron text-2xl font-bold mb-6 text-cosmic-cyan">Technical Arsenal</h3>
-              
-              <div className="space-y-6">
-                {SKILLS.flatMap(category => 
-                  category.skills.map((skill, index) => (
+            {SKILLS.map((category, categoryIndex) => (
+              <div key={category.category} className="glass-dark rounded-2xl p-6">
+                <h3 className="flex items-center font-orbitron text-xl font-bold mb-4 text-cosmic-cyan">
+                  <i className={`${category.icon} mr-3`}></i>
+                  {category.category}
+                </h3>
+                
+                <div className="grid grid-cols-1 gap-3">
+                  {category.skills.map((skill, index) => (
                     <motion.div
-                      key={`${category.category}-${skill.name}`}
+                      key={skill}
                       initial={{ opacity: 0, x: -20 }}
                       animate={isIntersecting ? { opacity: 1, x: 0 } : {}}
-                      transition={{ duration: 0.6, delay: 0.1 * index }}
-                      className="skill-item"
+                      transition={{ duration: 0.6, delay: 0.1 * (categoryIndex * 5 + index) }}
+                      className="bg-cosmic-purple/30 rounded-lg px-4 py-2 text-sm font-medium border border-cosmic-cyan/20 hover:border-cosmic-cyan/40 transition-colors duration-300"
                     >
-                      <div className="flex justify-between mb-2">
-                        <span className="font-medium">{skill.name}</span>
-                        <span className="text-cosmic-cyan">{skill.level}%</span>
-                      </div>
-                      <div className="bg-cosmic-purple rounded-full h-3">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          animate={isIntersecting ? { width: `${skill.level}%` } : {}}
-                          transition={{ duration: 2, delay: 0.5 + index * 0.1 }}
-                          className="skill-bar bg-gradient-to-r from-cosmic-cyan to-cosmic-teal h-3 rounded-full"
-                        />
-                      </div>
+                      {skill}
                     </motion.div>
-                  ))
-                )}
+                  ))}
+                </div>
               </div>
-            </div>
-
-            {/* Achievement Stats */}
-            <div className="grid grid-cols-2 gap-4">
-              {ACHIEVEMENTS.map((achievement, index) => (
-                <motion.div
-                  key={achievement.label}
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={isIntersecting ? { y: 0, opacity: 1 } : {}}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="glass-dark rounded-xl p-6 text-center"
-                >
-                  <div className={`text-3xl font-orbitron font-bold text-${achievement.color} mb-2`}>
-                    {formatValue(achievement.label, animatedValues[achievement.label] || 0)}
-                  </div>
-                  <div className="text-sm text-gray-300">{achievement.label}</div>
-                  <div className="text-xs text-gray-400 mt-1">{achievement.description}</div>
-                </motion.div>
-              ))}
-            </div>
+            ))}
           </motion.div>
 
-          {/* About Content */}
+          {/* About Content & Stats */}
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             animate={isIntersecting ? { x: 0, opacity: 1 } : {}}
@@ -132,31 +104,35 @@ export default function About() {
             />
             
             <div className="glass-dark rounded-2xl p-8">
-              <h3 className="font-orbitron text-2xl font-bold mb-4 text-cosmic-coral">Education Journey</h3>
+              <h3 className="font-orbitron text-2xl font-bold mb-4 text-cosmic-coral">Education</h3>
               <div className="space-y-4">
                 <div className="border-l-4 border-cosmic-cyan pl-6">
                   <h4 className="font-semibold text-lg">{PERSONAL_INFO.degree}</h4>
                   <p className="text-cosmic-cyan">{PERSONAL_INFO.university}</p>
                   <p className="text-sm text-gray-400">
-                    Expected {PERSONAL_INFO.expectedGraduation} • CGPA: {PERSONAL_INFO.cgpa}
-                  </p>
-                  <p className="text-sm text-gray-300 mt-2">
-                    Ranked {PERSONAL_INFO.hackathonRank} out of 400+ teams in SmartBU Hackathon
+                    Expected {PERSONAL_INFO.expectedGraduation}
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="glass-dark rounded-2xl p-8">
-              <h3 className="font-orbitron text-2xl font-bold mb-4 text-cosmic-teal">Leadership Experience</h3>
-              <div className="border-l-4 border-cosmic-teal pl-6">
-                <h4 className="font-semibold text-lg">Core Member - FullStack BU</h4>
-                <p className="text-cosmic-teal">{PERSONAL_INFO.university}</p>
-                <p className="text-sm text-gray-400">February 2023 – August 2023</p>
-                <p className="text-sm text-gray-300 mt-2">
-                  Managed organizing team for yearly tech fest i-Cosmic
-                </p>
-              </div>
+            {/* Achievement Stats */}
+            <div className="grid grid-cols-2 gap-4">
+              {ACHIEVEMENTS.map((achievement, index) => (
+                <motion.div
+                  key={achievement.label}
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={isIntersecting ? { y: 0, opacity: 1 } : {}}
+                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                  className="glass-dark rounded-xl p-6 text-center"
+                >
+                  <div className={`text-3xl font-orbitron font-bold text-${achievement.color} mb-2`}>
+                    {formatValue(achievement.label, animatedValues[achievement.label] || 0)}
+                  </div>
+                  <div className="text-sm text-gray-300">{achievement.label}</div>
+                  <div className="text-xs text-gray-400 mt-1">{achievement.description}</div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>

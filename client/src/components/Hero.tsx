@@ -75,7 +75,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto"
         >
-          Crafting digital experiences with cutting-edge technologies. Currently pursuing B.Tech CSE at {PERSONAL_INFO.university} with {PERSONAL_INFO.cgpa} CGPA.
+          Crafting digital experiences with cutting-edge technologies. Currently pursuing B.Tech CSE at {PERSONAL_INFO.university}.
         </motion.p>
         
         <motion.div

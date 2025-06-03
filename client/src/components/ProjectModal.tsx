@@ -164,23 +164,16 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
             
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-700">
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="flex items-center justify-center gap-2 bg-cosmic-cyan text-white px-6 py-3 rounded-lg font-medium hover:bg-cosmic-cyan/80 transition-colors duration-300"
-              >
-                <ExternalLink className="w-4 h-4" />
-                View Live Demo
-              </motion.button>
-              <motion.button
+            <div className="flex justify-center pt-6 border-t border-gray-700">
+              <motion.a
+                href="#"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="flex items-center justify-center gap-2 border border-gray-600 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors duration-300"
               >
                 <Github className="w-4 h-4" />
                 View Source Code
-              </motion.button>
+              </motion.a>
             </div>
           </div>
         </motion.div>
