@@ -22,28 +22,32 @@ const Education = () => {
         </h2>
       </motion.div>
 
-      {/* Education Card(s) */}
+      {/* Education Cards */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={isIntersecting ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className="max-w-4xl mx-auto"
+        className="max-w-4xl mx-auto space-y-6"
       >
+        {/* Degree Card */}
         <div className="p-8 bg-cosmic-purple/80 hover:bg-cosmic-purple/90 border border-cosmic-cyan/40 shadow-xl rounded-2xl transition-all duration-500">
           <h3 className="text-2xl font-bold font-orbitron uppercase tracking-wider gradient-text">
             B.Tech in Computer Science Engineering
           </h3>
           <p className="text-gray-300 text-sm font-medium mt-2">
-  Bennett University — Expected June 2026
-</p>
-
+            Bennett University — Expected June 2026
+          </p>
           <p className="text-gray-300 text-sm mt-1">
             CGPA: 8.3
           </p>
         </div>
 
-        {/* Duplicate this card for more entries */}
-        {/* <div className="...">...</div> */}
+        {/* DSA Achievement Card */}
+        <div className="p-6 bg-cosmic-purple/80 hover:bg-cosmic-purple/90 border border-cosmic-cyan/40 shadow-xl rounded-2xl transition-all duration-500 text-center">
+          <p className="text-lg font-bold font-orbitron gradient-text">
+            Solved 320+ questions on LeetCode, GFG, and TUF+
+          </p>
+        </div>
       </motion.div>
     </section>
   );
