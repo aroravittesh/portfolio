@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
-const Education = () => {
+const Extracurricular = () => {
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
 
   return (
     <section
-      id="education"
+      id="extracurricular"
       ref={ref}
       className="py-20 px-6 md:px-16 bg-cosmic-dark text-white"
     >
@@ -18,11 +18,11 @@ const Education = () => {
         className="text-center mb-12"
       >
         <h2 className="text-4xl md:text-5xl font-bold font-orbitron tracking-wide">
-          <span className="gradient-text">Education</span>
+          <span className="gradient-text">Extracurricular</span>
         </h2>
       </motion.div>
 
-      {/* Education Card(s) */}
+      {/* Activity Card */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={isIntersecting ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
@@ -30,23 +30,28 @@ const Education = () => {
         className="max-w-4xl mx-auto"
       >
         <div className="p-8 bg-cosmic-purple/80 hover:bg-cosmic-purple/90 border border-cosmic-cyan/40 shadow-xl rounded-2xl transition-all duration-500">
-          <h3 className="text-2xl font-bold font-orbitron uppercase tracking-wider gradient-text">
-            B.Tech in Computer Science Engineering
+          <h3 className="text-2xl font-bold font-orbitron tracking-wider gradient-text">
+            FullStack BU – Core Member
           </h3>
           <p className="text-gray-300 text-sm font-medium mt-2">
-  Bennett University — Expected June 2026
-</p>
-
-          <p className="text-gray-300 text-sm mt-1">
-            CGPA: 8.3
+            Bennett University, Greater Noida, UP, India
           </p>
+          <p className="text-gray-400 text-sm mt-1">
+            February 2023 – August 2023
+          </p>
+          <ul className="list-disc list-inside mt-4 space-y-1 text-gray-300 text-sm">
+            <li>
+              Core team member in FullStack BU club at Bennett University.
+            </li>
+            <li>
+              Managed and participated in organizing team for yearly tech fest
+              of Bennett University called i-Cosmic.
+            </li>
+          </ul>
         </div>
-
-        {/* Duplicate this card for more entries */}
-        {/* <div className="...">...</div> */}
       </motion.div>
     </section>
   );
 };
 
-export default Education;
+export default Extracurricular;

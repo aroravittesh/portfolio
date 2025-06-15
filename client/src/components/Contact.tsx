@@ -11,9 +11,10 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 relative" ref={ref}>
       <div className="container mx-auto px-6">
+        {/* Heading */}
         <motion.div
           initial={{ y: 50, opacity: 0 }}
-          animate={isIntersecting ? { y: 0, opacity: 1 } : {}}
+          animate={isIntersecting ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
@@ -26,10 +27,10 @@ export default function Contact() {
         </motion.div>
 
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12 max-w-4xl mx-auto">
-          {/* Contact Info */}
+          {/* Contact Info Card */}
           <motion.div
             initial={{ x: -50, opacity: 0 }}
-            animate={isIntersecting ? { x: 0, opacity: 1 } : {}}
+            animate={isIntersecting ? { x: 0, opacity: 1 } : { x: -50, opacity: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8 w-full lg:w-1/2"
           >
@@ -37,6 +38,7 @@ export default function Contact() {
               <h3 className="font-orbitron text-2xl font-bold mb-6 text-cosmic-cyan">Get In Touch</h3>
 
               <div className="space-y-6">
+                {/* Email */}
                 <motion.div 
                   className="flex items-center space-x-4"
                   whileHover={{ x: 5 }}
@@ -50,6 +52,7 @@ export default function Contact() {
                   </div>
                 </motion.div>
 
+                {/* Phone */}
                 <motion.div 
                   className="flex items-center space-x-4"
                   whileHover={{ x: 5 }}
@@ -63,6 +66,7 @@ export default function Contact() {
                   </div>
                 </motion.div>
 
+                {/* Location */}
                 <motion.div 
                   className="flex items-center space-x-4"
                   whileHover={{ x: 5 }}
@@ -77,6 +81,7 @@ export default function Contact() {
                 </motion.div>
               </div>
 
+              {/* Social Links */}
               <div className="mt-8 pt-8 border-t border-gray-600">
                 <p className="text-gray-300 mb-4">Follow me on social platforms:</p>
                 <div className="flex space-x-4">
@@ -101,9 +106,6 @@ export default function Contact() {
               </div>
             </div>
           </motion.div>
-
-          {/* Image */}
-         
         </div>
       </div>
     </section>

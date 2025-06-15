@@ -44,9 +44,10 @@ export default function Projects() {
     <>
       <section id="projects" className="py-20 relative" ref={ref}>
         <div className="container mx-auto px-6">
+          {/* Section Header */}
           <motion.div
             initial={{ y: 50, opacity: 0 }}
-            animate={isIntersecting ? { y: 0, opacity: 1 } : {}}
+            animate={isIntersecting ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -58,12 +59,13 @@ export default function Projects() {
             </p>
           </motion.div>
 
+          {/* Project Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {PROJECTS.map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ y: 50, opacity: 0 }}
-                animate={isIntersecting ? { y: 0, opacity: 1 } : {}}
+                animate={isIntersecting ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="project-card glass-dark rounded-2xl overflow-hidden group cursor-pointer"
                 onClick={() => setSelectedProject(project)}

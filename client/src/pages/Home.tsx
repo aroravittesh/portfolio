@@ -9,6 +9,8 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import WhatIDo from "@/components/WhatIDo";
 import Navigation from "@/components/Navigation"; // Mobile Nav
+import Education from "@/components/Education";
+import Extracurricular from "@/components/Extracurricular";
 
 export default function Home() {
   const [showMenu, setShowMenu] = useState(false);
@@ -56,6 +58,12 @@ export default function Home() {
         </section>
         <section id="skills">
           <Skills />
+        </section>
+        <section id="education">
+          <Education />
+        </section>
+        <section id="extracurricular">
+          <Extracurricular />
         </section>
         <section id="contact">
           <Contact />
