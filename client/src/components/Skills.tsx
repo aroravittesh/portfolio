@@ -144,13 +144,13 @@ import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { SKILLS } from "@/lib/constants";
 
-export default function About() {
+export default function Skills() {
   const { ref, isIntersecting } = useIntersectionObserver({
     threshold: 0.2,
   });
 
   return (
-    <section id="about" className="py-20 relative" ref={ref}>
+    <section id="skills" className="py-20 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ y: 50, opacity: 0 }}

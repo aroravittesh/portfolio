@@ -222,3 +222,12 @@
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--cosmic-teal));
 }
+
+/* Hide scrollbar for main content area */
+main::-webkit-scrollbar {
+  display: none;
+}
+main {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
