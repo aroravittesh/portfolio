@@ -72,7 +72,7 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
 
             {/* Resume Button */}
             <a
-              href="https://drive.google.com/file/d/17aKdF-oCK0xv0zh1BW3gRanHly_E9nCu/view?usp=sharing"
+              href="https://drive.google.com/file/d/1aEStvpm_6jMkDD93337aIXuc4T5xmNoh/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="block bg-cosmic-cyan text-white text-center px-4 py-2 rounded-md hover:bg-cosmic-cyan/80 transition-colors duration-300 text-sm font-medium mt-4"
