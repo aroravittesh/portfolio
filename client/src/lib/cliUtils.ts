@@ -93,8 +93,8 @@ export const personalData = () => [
   
   export const education = () => [
     '🎓 B.Tech in CSE, Bennett University (2022 - 2026)',
-    'CGPA: 8.3',
-    'Solved 320+ questions on LeetCode, GFG, and TUF+'
+    'CGPA: 8.42',
+    'Solved 370+ questions on LeetCode, GFG, and TUF+'
   ];
   
   export const extras = () => [

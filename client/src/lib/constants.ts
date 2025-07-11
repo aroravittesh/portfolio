@@ -8,11 +8,11 @@ export const PERSONAL_INFO = {
   university: "Bennett University",
   degree: "B.Tech Computer Science Engineering",
   expectedGraduation: "June 2026",
-  problemsSolved: "320+",
+  problemsSolved: "370+",
   linkedIn: "https://linkedin.com/in/vittesh-arora",
   github: "https://github.com/aroravittesh",
   leetcode: "https://leetcode.com/u/vittesharora",
-  resume: "https://drive.google.com/file/d/1aEStvpm_6jMkDD93337aIXuc4T5xmNoh/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/14_pTrgUpJy5TWQJtgvgl_Ifo3bum1IoO/view?usp=sharing?usp=sharing"
 };
 
 export const TYPING_TEXTS = [
@@ -155,7 +155,7 @@ export const PROJECTS = [
 
 export const ACHIEVEMENTS = [
   {
-    value: "320+",
+    value: "30+",
     label: "Problems Solved",
     description: "LeetCode, TUF+, GeeksforGeeks",
     color: "cosmic-cyan"

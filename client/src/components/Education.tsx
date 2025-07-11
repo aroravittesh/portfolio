@@ -38,14 +38,14 @@ const Education = () => {
             Bennett University — Expected June 2026
           </p>
           <p className="text-gray-300 text-sm mt-1">
-            CGPA: 8.3
+            CGPA: 8.42
           </p>
         </div>
 
         {/* DSA Achievement Card */}
         <div className="p-6 bg-cosmic-purple/80 hover:bg-cosmic-purple/90 border border-cosmic-cyan/40 shadow-xl rounded-2xl transition-all duration-500 text-center">
           <p className="text-lg font-bold font-orbitron gradient-text">
-            Solved 320+ questions on LeetCode, GFG, and TUF+
+            Solved 370+ questions on LeetCode, GFG, and TUF+
           </p>
         </div>
       </motion.div>
