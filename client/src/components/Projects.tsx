@@ -14,28 +14,35 @@ export default function Projects() {
 
   const getCategoryColor = (category: string) => {
     const colors: Record<string, string> = {
-      "Sustainability": "emerald-400",
-      "Mobile App": "cosmic-cyan",
-      "AI Chatbot": "cosmic-coral",
+      "Sustainability": "text-emerald-400",
+      "Mobile App": "text-cosmic-cyan",
+      "AI Chatbot": "text-cosmic-coral",
+      "E-commerce": "text-indigo-400",
+      "Health & Wellness": "text-rose-400",
     };
-    return colors[category] || "gray-400";
+  
+    return colors[category] || "text-gray-700";
   };
-
+  
   const getTechColor = (tech: string) => {
     const colors: Record<string, string> = {
       "React.js": "cosmic-cyan",
+      "React Native": "cosmic-cyan",
       "Node.js": "emerald-400",
+      "Express.js": "cosmic-teal",
       "MongoDB": "cosmic-teal",
       "OpenAI API": "purple-400",
-      "React Native": "cosmic-cyan",
-      "Express.js": "cosmic-teal",
       "Google Maps API": "emerald-400",
       "MERN Stack": "cosmic-cyan",
       "Power Virtual Agents": "cosmic-coral",
       "SharePoint": "blue-400",
+      "PostgreSQL": "indigo-400",
+      "Facebook Prophet": "orange-400",
     };
+  
     return colors[tech] || "gray-400";
   };
+  
 
   const formatRepoName = (title: string) =>
     title.toLowerCase().replace(/\s+/g, "-");
@@ -81,16 +88,25 @@ export default function Projects() {
                 </div>
 
                 <div className="p-6">
-                  <div className="flex items-center mb-3">
-                    <i className={`fas fa-${project.category === 'Sustainability' ? 'leaf' : project.category === 'Mobile App' ? 'mobile-alt' : 'robot'} text-${getCategoryColor(project.category)} mr-2`}></i>
-                    <span className={`text-xs bg-${getCategoryColor(project.category)}/20 text-${getCategoryColor(project.category)} px-2 py-1 rounded-full`}>
-                      {project.category}
-                    </span>
-                  </div>
+                <div className="flex items-center mb-3">
+    <i className={`fas ${
+      project.category === 'Sustainability' ? 'fa-leaf' :
+      project.category === 'Mobile App' ? 'fa-mobile-alt' :
+      project.category === 'AI Chatbot' ? 'fa-robot' :
+      project.category === 'E-commerce' ? 'fa-store' :
+      project.category === 'Health & Wellness' ? 'fa-heartbeat' :
+      'fa-cube'
+    } ${getCategoryColor(project.category)} mr-2`}></i>
 
-                  <h3 className={`font-orbitron text-xl font-bold mb-3 text-${getCategoryColor(project.category)}`}>
-                    {project.title}
-                  </h3>
+    <span className={`text-xs ${getCategoryColor(project.category)} px-2 py-1 rounded-full`}>
+      {project.category}
+    </span>
+  </div>
+
+  <h3 className={`font-orbitron text-xl font-bold mb-3 ${getCategoryColor(project.category)}`}>
+  {project.title}
+</h3>
+
                   <p className="text-gray-300 text-sm mb-4 line-clamp-2">
                     {project.subtitle}
                   </p>
@@ -99,7 +115,7 @@ export default function Projects() {
                     {project.technologies.slice(0, 4).map((tech) => (
                       <span
                         key={tech}
-                        className={`text-xs bg-${getTechColor(tech)}/20 text-${getTechColor(tech)} px-2 py-1 rounded`}
+                        className={`text-xs text-${getTechColor(tech)} px-2 py-1 rounded`}
                       >
                         {tech}
                       </span>
@@ -107,16 +123,19 @@ export default function Projects() {
                   </div>
 
                   <div className="flex justify-between items-center">
-                    <button className={`text-${getCategoryColor(project.category)} hover:text-white transition-colors duration-300 flex items-center text-sm`}>
-                      <ExternalLink className="w-4 h-4 mr-1" />
-                      View Details
-                    </button>
+                  <button className={`${getCategoryColor(project.category)} hover:text-white transition-colors duration-300 flex items-center text-sm`}>
+  <ExternalLink className="w-4 h-4 mr-1" />
+  View Details
+</button>
+
                     <a
-                      href={`https://github.com/aroravittesh/${formatRepoName(project.title)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-white transition-colors duration-300"
-                    >
+  href={`https://github.com/aroravittesh/${
+    project.title === "Sanchaya" ? "GreenRoute" : formatRepoName(project.title)
+  }`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-gray-400 hover:text-white transition-colors duration-300"
+>
                       <Github className="w-5 h-5" />
                     </a>
                   </div>

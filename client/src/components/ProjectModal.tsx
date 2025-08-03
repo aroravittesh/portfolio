@@ -22,25 +22,115 @@ interface ProjectModalProps {
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   if (!project) return null;
 
-  const getTechColor = (tech: string) => {
-    const colors: Record<string, string> = {
-      "React.js": "cosmic-cyan",
-      "Node.js": "emerald-400",
-      "MongoDB": "cosmic-teal",
-      "Python": "yellow-400",
-      "OpenAI API": "purple-400",
-      "React Native": "cosmic-cyan",
-      "Express.js": "cosmic-teal",
-      "Google Maps API": "emerald-400",
-      "MERN Stack": "cosmic-cyan",
-      "Power Virtual Agents": "cosmic-coral",
-      "SharePoint": "blue-400",
+  // const getTechColor = (tech: string) => {
+  //   const colors: Record<string, string> = {
+  //     "React.js": "cosmic-cyan",
+  //     "React Native": "cosmic-cyan",
+  //     "Node.js": "emerald-400",
+  //     "Express.js": "cosmic-teal",
+  //     "MongoDB": "cosmic-teal",
+  //     "PostgreSQL": "blue-400",
+  //     "Python": "yellow-400",
+  //     "OpenAI API": "purple-400",
+  //     "Google Maps API": "emerald-400",
+  //     "MERN Stack": "cosmic-cyan",
+  //     "Power Virtual Agents": "cosmic-coral",
+  //     "SharePoint": "blue-400",
+  //     "Facebook Prophet": "orange-400"
+  //   };
+  
+  //   return colors[tech] || "gray-400";
+  // };
+  
+  const getTechColorClass = (tech: string) => {
+    const map: Record<
+      string,
+      { bg: string; text: string; border: string }
+    > = {
+      "React.js": {
+        bg: "bg-cosmic-cyan/20",
+        text: "text-cosmic-cyan",
+        border: "border-cosmic-cyan/30"
+      },
+      "React Native": {
+        bg: "bg-cosmic-cyan/20",
+        text: "text-cosmic-cyan",
+        border: "border-cosmic-cyan/30"
+      },
+      "Node.js": {
+        bg: "bg-emerald-400/20",
+        text: "text-emerald-400",
+        border: "border-emerald-400/30"
+      },
+      "Express.js": {
+        bg: "bg-cosmic-teal/20",
+        text: "text-cosmic-teal",
+        border: "border-cosmic-teal/30"
+      },
+      "MongoDB": {
+        bg: "bg-cosmic-teal/20",
+        text: "text-cosmic-teal",
+        border: "border-cosmic-teal/30"
+      },
+      "PostgreSQL": {
+        bg: "bg-blue-400/20",
+        text: "text-blue-400",
+        border: "border-blue-400/30"
+      },
+      "Python": {
+        bg: "bg-yellow-400/20",
+        text: "text-yellow-400",
+        border: "border-yellow-400/30"
+      },
+      "OpenAI API": {
+        bg: "bg-purple-400/20",
+        text: "text-purple-400",
+        border: "border-purple-400/30"
+      },
+      "Google Maps API": {
+        bg: "bg-emerald-400/20",
+        text: "text-emerald-400",
+        border: "border-emerald-400/30"
+      },
+      "MERN Stack": {
+        bg: "bg-cosmic-cyan/20",
+        text: "text-cosmic-cyan",
+        border: "border-cosmic-cyan/30"
+      },
+      "Power Virtual Agents": {
+        bg: "bg-cosmic-coral/20",
+        text: "text-cosmic-coral",
+        border: "border-cosmic-coral/30"
+      },
+      "SharePoint": {
+        bg: "bg-blue-400/20",
+        text: "text-blue-400",
+        border: "border-blue-400/30"
+      },
+      "Facebook Prophet": {
+        bg: "bg-orange-400/20",
+        text: "text-orange-400",
+        border: "border-orange-400/30"
+      }
     };
-    return colors[tech] || "gray-400";
+  
+    return (
+      map[tech] || {
+        bg: "bg-gray-300",
+        text: "text-gray-700",
+        border: "border-gray-400"
+      }
+    );
   };
+  
 
-  const getGithubLink = (title: string) =>
-    `https://github.com/aroravittesh/${title.toLowerCase().replace(/\s+/g, "-")}`;
+  const getGithubLink = (title: string) => {
+    if (title.toUpperCase() === "SANCHAYA") {
+      return "https://github.com/aroravittesh/GreenRoute";
+    }
+    return `https://github.com/aroravittesh/${title.toLowerCase().replace(/\s+/g, "-")}`;
+  };
+  
 
   return (
     <AnimatePresence>
@@ -160,7 +250,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 Technology Stack
               </h3>
               <div className="flex flex-wrap gap-3">
-                {project.technologies.map((tech, index) => (
+                {/* {project.technologies.map((tech, index) => (
                   <motion.span
                     key={tech}
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -176,7 +266,22 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   >
                     {tech}
                   </motion.span>
-                ))}
+                ))} */}
+                {project.technologies.map((tech, index) => {
+  const color = getTechColorClass(tech);
+  return (
+    <motion.span
+      key={tech}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3, delay: index * 0.1 }}
+      className={`px-4 py-2 border ${color.text} ${color.border} rounded-full text-sm font-medium`}
+    >
+      {tech}
+    </motion.span>
+  );
+})}
+
               </div>
             </div>
 

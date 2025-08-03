@@ -101,7 +101,7 @@ const Education = () => {
         {/* DSA Achievement Card */}
         <div className="glass-dark rounded-2xl p-6 text-center transition-all duration-500">
           <p className="text-lg font-bold font-orbitron gradient-text">
-            Solved 370+ questions on LeetCode, GFG, and TUF+
+            Solved 380+ questions on LeetCode, GFG, and TUF+
           </p>
         </div>
       </motion.div>

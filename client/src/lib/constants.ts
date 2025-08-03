@@ -8,7 +8,7 @@ export const PERSONAL_INFO = {
   university: "Bennett University",
   degree: "B.Tech Computer Science Engineering",
   expectedGraduation: "June 2026",
-  problemsSolved: "370+",
+  problemsSolved: "380+",
   linkedIn: "https://linkedin.com/in/vittesh-arora",
   github: "https://github.com/aroravittesh",
   leetcode: "https://leetcode.com/u/vittesharora",
@@ -83,6 +83,28 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
+    id: "sanchaya",
+    title: "Sanchaya",
+    subtitle: "Smart Inventory & Spoilage Optimization for Sustainable Retail",
+    description: "A production-grade sustainability platform designed to minimize food spoilage in retail chains by using AI-powered demand forecasting and optimized inventory routing. Built for real-world scalability with centralized control and intelligent decision-making.",
+    image: "https://plus.unsplash.com/premium_photo-1681433396703-04f3879c9831?auto=format&blend=000000&blend-alpha=10&blend-mode=normal&blend-w=1&crop=faces%2Cedges&fit=crop&h=630&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzE3Mjk1Mjc2fA&ixlib=rb-4.0.3&mark=https%3A%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&mark-align=top%2Cleft&mark-pad=50&mark-w=64&q=60&w=1200",
+    technologies: ["React.js", "React Native", "Node.js", "PostgreSQL", "Facebook Prophet"],
+    features: [
+      "Store-level demand forecasting",
+      "Spoilage simulation and tracking",
+      "Smart distribution route optimization",
+      "Admin and employee dashboards",
+      "Mobile-friendly PWA support"
+    ],
+    highlights: [
+      "AI-powered perishable inventory planning",
+      "Centralized inventory control simulation",
+      "Cross-platform (Web + Mobile) architecture"
+    ],
+    category: "Sustainability",
+    color: "teal"
+  },  
+  {
     id: "carbonmitra",
     title: "CARBONMITRA",
     subtitle: "Web Application to Help Coal Mines Achieve Carbon Neutrality",
@@ -150,7 +172,55 @@ export const PROJECTS = [
     ],
     category: "AI Chatbot",
     color: "rose"
+  },
+  {
+    id: "flex",
+    title: "Flex",
+    subtitle: "AI-Powered Fitness and Nutrition Tracker",
+    description: "An intelligent mobile application that delivers personalized workout and diet plans based on user attributes like body type, age, and available equipment. Flex also tracks daily water intake and calorie consumption for holistic health management.",
+    image: "https://images.unsplash.com/photo-1723117418183-2422c62a5a75?auto=format&blend=000000&blend-alpha=10&blend-mode=normal&blend-w=1&crop=faces%2Cedges&fit=crop&h=630&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzQ3MzI5NDUwfA&ixlib=rb-4.1.0&mark=https%3A%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&mark-align=top%2Cleft&mark-pad=50&mark-w=64&q=60&w=1200",
+    technologies: ["React Native", "Node.js", "Express.js", "MongoDB", "OpenAI API"],
+    features: [
+      "Personalized workout plan generation",
+      "AI-driven diet and calorie tracking",
+      "Daily water intake logging",
+      "Interactive and intuitive mobile UI",
+      "Equipment-aware routine recommendations"
+    ],
+    highlights: [
+      "Real-time AI-based health recommendations",
+      "Supports multiple body types and goals",
+      "Offline-first mobile design",
+      "End-to-end MERN architecture"
+    ],
+    category: "Health & Wellness",
+    color: "rose"
+  },
+  {
+    id: "matrix",
+    title: "MATRIX",
+    subtitle: "Electronics Rental E-commerce Platform",
+    description: "A scalable e-commerce platform designed for renting electronics like laptops, smartphones, and cameras. Matrix helps users access devices affordably while allowing vendors to manage inventory, pricing, and availability dynamically.",
+    image: "https://images.unsplash.com/photo-1586171680404-d9376632f9e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=eyJhcHBfaWQiOjEyMDd9&ixlib=rb-1.2.1&q=80&w=1080",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
+    features: [
+      "Browse and rent electronics on-demand",
+      "Dynamic product management system",
+      "Real-time inventory and availability tracking",
+      "Secure user authentication and checkout",
+      "Admin panel for vendor control"
+    ],
+    highlights: [
+      "Cost-effective electronics access",
+      "Built using full MERN stack",
+      "Responsive and intuitive UI/UX",
+      "Supports multi-device inventory"
+    ],
+    category: "E-commerce",
+    color: "indigo"
   }
+  
+  
 ];
 
 export const ACHIEVEMENTS = [

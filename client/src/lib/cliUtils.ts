@@ -26,6 +26,23 @@ export const personalData = () => [
   
   export const getProjectDetails = (name: string): string[] => {
     const projects: Record<string, string[]> = {
+      sanchaya: [
+        `Sanchaya (Web + Mobile Platform)`,
+        `→ Smart Inventory & Spoilage Optimization System`,
+        `→ Built using React.js, React Native, Node.js, PostgreSQL, Facebook Prophet`,
+        ``,
+        `Features:`,
+        `- AI-based demand forecasting`,
+        `- Spoilage simulation modeling`,
+        `- Optimized inventory routing`,
+        `- Admin and store dashboards`,
+        `- PWA-compatible mobile support`,
+        ``,
+        `Highlights:`,
+        `- Centralized control simulation`,
+        `- Accurate spoilage prediction`,
+        `- Scalable architecture`
+      ],
       carbonmitra: [
         `CARBONMITRA (Web App)`,
         `→ Web Application to Help Coal Mines Achieve Carbon Neutrality`,
@@ -78,10 +95,46 @@ export const personalData = () => [
         `- Highly scalable`,
         `- SharePoint secured`,
         `- Personalized responses`
+      ],
+      flex: [
+        `Flex (Mobile App)`,
+        `→ AI-Powered Fitness and Nutrition Tracker`,
+        `→ Built using React Native, Node.js, Express.js, MongoDB, OpenAI API`,
+        ``,
+        `Features:`,
+        `- Personalized workout and diet plans`,
+        `- AI calorie & water intake tracker`,
+        `- Equipment-aware fitness routines`,
+        `- Clean mobile-first design`,
+        ``,
+        `Highlights:`,
+        `- Real-time AI health feedback`,
+        `- Offline-first support`,
+        `- Tailored for multiple body types`,
+        `- Built with full MERN architecture`
+      ],
+      matrix: [
+        `Matrix (E-commerce Web App)`,
+        `→ Electronics Rental Platform`,
+        `→ Built using React.js, Node.js, Express.js, MongoDB`,
+        ``,
+        `Features:`,
+        `- Rent electronics like phones, laptops, cameras`,
+        `- Dynamic product management system`,
+        `- Real-time availability & inventory tracking`,
+        `- Secure checkout and login`,
+        ``,
+        `Highlights:`,
+        `- Cost-effective rental experience`,
+        `- MERN stack powered`,
+        `- Clean and responsive UI`,
+        `- Admin dashboard for vendors`
       ]
     };
-    return projects[name.toLowerCase()] || ["❌ Project not found. Try: carbonmitra, echoes, or cookie."];
+  
+    return projects[name.toLowerCase()] || ["❌ Project not found. Try: sanchaya, carbonmitra, echoes, cookie, flex, or matrix."];
   };
+  
   
   export const skills = () => [
     'Languages: C++, Python, Java, JavaScript, TypeScript',

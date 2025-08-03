@@ -37,7 +37,15 @@ import {
       case 'whatido':
         return getWhatIDo().split('\n');
       case 'projects':
-        return ['Try: project carbonmitra, project echoes, or project cookie'];
+        return [
+          'Try:',
+          '→ project sanchaya',
+          '→ project carbonmitra',
+          '→ project echoes',
+          '→ project cookie',
+          '→ project flex',
+          '→ project matrix'
+        ];
       case 'project':
         return getProjectDetails(argStr);
       case 'skills':
