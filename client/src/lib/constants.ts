@@ -12,7 +12,7 @@ export const PERSONAL_INFO = {
   linkedIn: "https://linkedin.com/in/vittesh-arora",
   github: "https://github.com/aroravittesh",
   leetcode: "https://leetcode.com/u/vittesharora",
-  resume: "https://drive.google.com/file/d/14_pTrgUpJy5TWQJtgvgl_Ifo3bum1IoO/view?usp=sharing?usp=sharing"
+  resume: "https://drive.google.com/file/d/1ZXwStrz4EtsYwXiCGpX4Ji2g0s43g3hm/view?usp=sharing"
 };
 
 export const TYPING_TEXTS = [
@@ -37,34 +37,93 @@ export const SKILLS = [
   {
     category: "Frameworks & Libraries",
     icon: "fas fa-layer-group",
-    skills: [
-      { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-      { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-      { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-      { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-      { name: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
-    ],
+skills: [
+  { 
+    name: "React.js", 
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" 
+  },
+  { 
+    name: "React Native", 
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" 
+  },
+  { 
+    name: "Node.js", 
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" 
+  },
+  { 
+    name: "Express.js", 
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" 
+  },
+  { 
+    name: "Next.js", 
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" 
+  },
+  { 
+    name: "HTML", 
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" 
+  },
+  { 
+    name: "CSS", 
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" 
+  },
+  { 
+    name: "Tailwind", 
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" 
+  },
+  
+],
+
   },
   {
     category: "Databases",
     icon: "fas fa-database",
     skills: [
-      { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-      { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-    ],
+  { 
+    name: "MySQL", 
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" 
+  },
+  { 
+    name: "MongoDB", 
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" 
+  },
+  { 
+    name: "PostgreSQL", 
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" 
+  },
+],
+
   },
   {
     category: "Cloud & Tools",
     icon: "fas fa-cloud",
     skills: [
-      { name: "GCP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" },
-      { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-      { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-      { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-      { name: "MS Office", icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftoffice.svg" },
-    ],
+  {
+    name: "AWS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+  },
+  {
+    name: "GCP",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+  },
+  {
+    name: "VS Code",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+  },
+  {
+    name: "Git",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+  },
+  {
+    name: "GitHub",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+  },
+  {
+    name: "MS Office",
+    icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftoffice.svg"
+  }
+],
+
+
   },
   {
     category: "Technical Expertise",
@@ -83,27 +142,29 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
-    id: "sanchaya",
-    title: "Sanchaya",
-    subtitle: "Smart Inventory & Spoilage Optimization for Sustainable Retail",
-    description: "A production-grade sustainability platform designed to minimize food spoilage in retail chains by using AI-powered demand forecasting and optimized inventory routing. Built for real-world scalability with centralized control and intelligent decision-making.",
-    image: "https://plus.unsplash.com/premium_photo-1681433396703-04f3879c9831?auto=format&blend=000000&blend-alpha=10&blend-mode=normal&blend-w=1&crop=faces%2Cedges&fit=crop&h=630&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzE3Mjk1Mjc2fA&ixlib=rb-4.0.3&mark=https%3A%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&mark-align=top%2Cleft&mark-pad=50&mark-w=64&q=60&w=1200",
-    technologies: ["React.js", "React Native", "Node.js", "PostgreSQL", "Facebook Prophet"],
-    features: [
-      "Store-level demand forecasting",
-      "Spoilage simulation and tracking",
-      "Smart distribution route optimization",
-      "Admin and employee dashboards",
-      "Mobile-friendly PWA support"
-    ],
-    highlights: [
-      "AI-powered perishable inventory planning",
-      "Centralized inventory control simulation",
-      "Cross-platform (Web + Mobile) architecture"
-    ],
-    category: "Sustainability",
-    color: "teal"
-  },  
+  id: "sanchaya",
+  title: "Sanchaya",
+  subtitle: "Smart Inventory & Spoilage Optimization for Sustainable Retail",
+  description: "A production-grade sustainability platform designed to minimize food spoilage in retail chains by using AI-powered demand forecasting and optimized inventory routing. Built for real-world scalability with centralized control and intelligent decision-making.",
+  image: "https://plus.unsplash.com/premium_photo-1681433396703-04f3879c9831?auto=format&blend=000000&blend-alpha=10&blend-mode=normal&blend-w=1&crop=faces%2Cedges&fit=crop&h=630&ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzE3Mjk1Mjc2fA&ixlib=rb-4.0.3&mark=https%3A%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&mark-align=top%2Cleft&mark-pad=50&mark-w=64&q=60&w=1200",
+  technologies: ["React.js", "React Native", "Node.js", "PostgreSQL", "Facebook Prophet"],
+  features: [
+    "Store-level demand forecasting",
+    "Spoilage simulation and tracking",
+    "Smart distribution route optimization",
+    "Admin and employee dashboards",
+    "Mobile-friendly PWA support"
+  ],
+  highlights: [
+    "AI-powered perishable inventory planning",
+    "Centralized inventory control simulation",
+    "Cross-platform (Web + Mobile) architecture"
+  ],
+  category: "Sustainability",
+  color: "teal",
+  liveUrl: "https://sanchaya-web.web.app/"
+},
+ 
   {
     id: "carbonmitra",
     title: "CARBONMITRA",

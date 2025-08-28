@@ -123,22 +123,44 @@ export default function Projects() {
                   </div>
 
                   <div className="flex justify-between items-center">
-                  <button className={`${getCategoryColor(project.category)} hover:text-white transition-colors duration-300 flex items-center text-sm`}>
-  <ExternalLink className="w-4 h-4 mr-1" />
-  View Details
-</button>
+  <div className="flex gap-3">
+    {/* Live Link - show only if available */}
+    {project.liveUrl && (
+      <a
+        href={project.liveUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${getCategoryColor(project.category)} hover:text-white transition-colors duration-300 flex items-center text-sm`}
+        onClick={(e) => e.stopPropagation()} // prevent modal open when clicking
+      >
+        <ExternalLink className="w-4 h-4 mr-1" />
+        Live
+      </a>
+    )}
 
-                    <a
-  href={`https://github.com/aroravittesh/${
-    project.title === "Sanchaya" ? "GreenRoute" : formatRepoName(project.title)
-  }`}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-gray-400 hover:text-white transition-colors duration-300"
->
-                      <Github className="w-5 h-5" />
-                    </a>
-                  </div>
+    {/* GitHub Repo */}
+    <a
+      href={`https://github.com/aroravittesh/${
+        project.title === "Sanchaya" ? "GreenRoute" : formatRepoName(project.title)
+      }`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-400 hover:text-white transition-colors duration-300"
+      onClick={(e) => e.stopPropagation()} // prevent modal open when clicking
+    >
+      <Github className="w-5 h-5" />
+    </a>
+  </div>
+
+  {/* View Details Button */}
+  <button
+    className={`${getCategoryColor(project.category)} hover:text-white transition-colors duration-300 flex items-center text-sm`}
+  >
+    <ExternalLink className="w-4 h-4 mr-1" />
+    View Details
+  </button>
+</div>
+
                 </div>
               </motion.div>
             ))}

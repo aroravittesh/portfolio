@@ -286,19 +286,36 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex justify-center pt-6 border-t border-gray-700">
-              <motion.a
-                href={getGithubLink(project.title)}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="flex items-center justify-center gap-2 border border-gray-600 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors duration-300"
-              >
-                <Github className="w-4 h-4" />
-                View Source Code
-              </motion.a>
-            </div>
+            {/* Action Buttons */}
+<div className="flex justify-center gap-4 pt-6 border-t border-gray-700">
+  {/* Live Link - only show if available */}
+  {project.liveUrl && (
+    <motion.a
+      href={project.liveUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className="flex items-center justify-center gap-2 border border-emerald-500 text-emerald-400 px-6 py-3 rounded-lg font-medium hover:bg-emerald-600/20 transition-colors duration-300"
+    >
+      🚀 Live Demo
+    </motion.a>
+  )}
+
+  {/* GitHub Link */}
+  <motion.a
+    href={getGithubLink(project.title)}
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.02 }}
+    whileTap={{ scale: 0.98 }}
+    className="flex items-center justify-center gap-2 border border-gray-600 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors duration-300"
+  >
+    <Github className="w-4 h-4" />
+    View Source Code
+  </motion.a>
+</div>
+
           </div>
         </motion.div>
       </motion.div>

@@ -94,7 +94,7 @@ const Education = () => {
             Bennett University — Expected June 2026
           </p>
           <p className="text-gray-300 text-sm mt-1">
-            CGPA: 8.42
+            CGPA: 8.47
           </p>
         </div>
 

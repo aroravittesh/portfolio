@@ -41,7 +41,9 @@ export const personalData = () => [
         `Highlights:`,
         `- Centralized control simulation`,
         `- Accurate spoilage prediction`,
-        `- Scalable architecture`
+        `- Scalable architecture`,
+        `- Live Link:`,
+        `  https://sanchaya-web.web.app/`,
       ],
       carbonmitra: [
         `CARBONMITRA (Web App)`,
@@ -138,16 +140,16 @@ export const personalData = () => [
   
   export const skills = () => [
     'Languages: C++, Python, Java, JavaScript, TypeScript',
-    'Frameworks: React.js, React Native, Node.js, Express.js, Tailwind',
-    'Databases: MySQL, MongoDB',
-    'Cloud & Tools: GCP, Git, GitHub, VS Code, MS Office',
+    'Frameworks: React.js, React Native, Node.js, Express.js, Next.js, Tailwind',
+    'Databases: MySQL, MongoDB, PostgreSQL',
+    'Cloud & Tools: AWS, GCP, Git, GitHub, VS Code, MS Office',
     'Expertise: DSA, OOPS, SE, OS, REST APIs, ML Basics'
   ];
   
   export const education = () => [
     '🎓 B.Tech in CSE, Bennett University (2022 - 2026)',
-    'CGPA: 8.42',
-    'Solved 370+ questions on LeetCode, GFG, and TUF+'
+    'CGPA: 8.47',
+    'Solved 380+ questions on LeetCode, GFG, and TUF+'
   ];
   
   export const extras = () => [
