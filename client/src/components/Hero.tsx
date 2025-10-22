@@ -166,6 +166,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { PERSONAL_INFO, TYPING_TEXTS } from "@/lib/constants";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import profilePic from "./e9a64050-4b15-4154-9fc3-14a853a365dc.jpg";
 
 export default function Hero() {
   const [typingText, setTypingText] = useState("");
@@ -206,8 +207,7 @@ export default function Hero() {
           className="animate-float"
         >
           <img 
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200" 
-            alt="Developer workspace" 
+            src={profilePic}
             className="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-cosmic-cyan animate-glow object-cover" 
           />
         </motion.div>

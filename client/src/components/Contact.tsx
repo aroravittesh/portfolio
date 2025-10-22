@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { PERSONAL_INFO } from "@/lib/constants";
 import { Mail, Phone, MapPin, Linkedin, Github, Code, Laptop } from "lucide-react";
+import profileImage from "./IMG_2594.jpeg"; 
 
 export default function Contact() {
   const { ref, isIntersecting } = useIntersectionObserver({
@@ -10,6 +11,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-20 relative" ref={ref}>
+      <br></br>
       <div className="container mx-auto px-6">
         {/* Heading */}
         <motion.div
@@ -105,6 +107,18 @@ export default function Contact() {
                 </div>
               </div>
             </div>
+          </motion.div>
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            animate={isIntersecting ? { x: 0, opacity: 1 } : { x: 50, opacity: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full lg:w-1/2 flex justify-center lg:justify-start"
+          >
+            <img
+              src={profileImage}
+              alt="Profile"
+              className="w-[350px] max-w-md h-[480px] object-cover rounded-2xl border-4 border-cosmic-cyan animate-glow shadow-lg"
+            />
           </motion.div>
         </div>
       </div>
