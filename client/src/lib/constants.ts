@@ -4,7 +4,8 @@ export const PERSONAL_INFO = {
   subtitle: "MERN Stack Specialist",
   email: "vittesharora04@gmail.com",
   phone: "+91-9460947980",
-  location: "Bengaluru, Karnataka, India",
+  phone1: "+1 (352) 301-5269",
+  location: "Gainesville, Floida, United States",
   university: "Bennett University",
   degree: "B.Tech Computer Science Engineering",
   expectedGraduation: "June 2026",
@@ -12,7 +13,7 @@ export const PERSONAL_INFO = {
   linkedIn: "https://linkedin.com/in/vittesh-arora",
   github: "https://github.com/aroravittesh",
   leetcode: "https://leetcode.com/u/vittesharora",
-  resume: "https://drive.google.com/file/d/1ZXwStrz4EtsYwXiCGpX4Ji2g0s43g3hm/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/1AySuf-aQONOxnFr0eNV2Jz2FE2Iwt0mo/view?usp=sharing"
 };
 
 export const TYPING_TEXTS = [

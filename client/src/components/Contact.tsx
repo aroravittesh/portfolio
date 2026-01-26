@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { PERSONAL_INFO } from "@/lib/constants";
 import { Mail, Phone, MapPin, Linkedin, Github, Code, Laptop } from "lucide-react";
-import profileImage from "./IMG_2594.jpeg"; 
+import profileImage from "./IMG_2594.jpeg";
 
 export default function Contact() {
   const { ref, isIntersecting } = useIntersectionObserver({
@@ -66,6 +66,10 @@ export default function Contact() {
                     <p className="font-medium">Phone</p>
                     <p className="text-gray-300">{PERSONAL_INFO.phone}</p>
                   </div>
+                  <div>
+                    <p className="font-medium">Phone</p>
+                    <p className="text-gray-300">{PERSONAL_INFO.phone1}</p>
+                  </div>
                 </motion.div>
 
                 {/* Location */}
@@ -122,6 +126,7 @@ export default function Contact() {
           </motion.div>
         </div>
       </div>
+      
     </section>
   );
 }

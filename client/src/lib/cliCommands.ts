@@ -57,7 +57,7 @@ import {
       case 'contact':
         return contact();
       case 'get-resume':
-        return ['📄 Resume: https://drive.google.com/file/d/1ZXwStrz4EtsYwXiCGpX4Ji2g0s43g3hm/view?usp=sharing'];
+        return ['📄 Resume: https://drive.google.com/file/d/1AySuf-aQONOxnFr0eNV2Jz2FE2Iwt0mo/view?usp=sharing'];
       case 'get-github':
         return ['🔗 GitHub: https://github.com/aroravittesh'];
       case 'get-linkedin':
