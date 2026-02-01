@@ -147,7 +147,7 @@ export const personalData = () => [
   ];
   
   export const education = () => [
-    'CISE Senior Certificate Program, Computer Science',
+    '🎓 CISE Senior Certificate Program, Computer Science',
     'University of Florida — May 2026',
     '',
     '🎓 B.Tech in CSE, Bennett University (2022 - 2026)',
