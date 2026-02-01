@@ -5,7 +5,7 @@ export const PERSONAL_INFO = {
   email: "vittesharora04@gmail.com",
   phone: "+91-9460947980",
   phone1: "+1 (352) 301-5269",
-  location: "Gainesville, Floida, United States",
+  location: "Gainesville, Florida, United States",
   university: "Bennett University",
   degree: "B.Tech Computer Science Engineering",
   expectedGraduation: "June 2026",
