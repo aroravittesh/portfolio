@@ -139,7 +139,7 @@ export const personalData = () => [
   
   
   export const skills = () => [
-    'Languages: C++, Python, Java, JavaScript, TypeScript',
+    'Languages: C++, JavaScript, TypeScript, Python, Java',
     'Frameworks: React.js, React Native, Node.js, Express.js, Next.js, Tailwind',
     'Databases: MySQL, MongoDB, PostgreSQL',
     'Cloud & Tools: AWS, GCP, Git, GitHub, VS Code, MS Office',
@@ -148,7 +148,7 @@ export const personalData = () => [
   
   export const education = () => [
     '🎓 B.Tech in CSE, Bennett University (2022 - 2026)',
-    'CGPA: 8.47',
+    'CGPA: 8.52',
     'Solved 380+ questions on LeetCode, GFG, and TUF+'
   ];
   
@@ -159,7 +159,7 @@ export const personalData = () => [
   
   export const contact = () => [
     '📧 Email: vittesharora04@gmail.com',
-    '📱 Phone: +91-9460947980',
-    '📍 Bengaluru, Karnataka, India'
+    '📱 Phone: +91-9460947980, +1 (352) 301-5269',
+    '📍 Gainesville, Florida, United States'
   ];
   
