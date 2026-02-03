@@ -63,7 +63,7 @@ import {
       case 'get-linkedin':
         return ['🔗 LinkedIn: https://linkedin.com/in/vittesh-arora'];
       case 'get-leetcode':
-        return ['🧠 LeetCode: https://leetcode.com/aroravittesh'];
+        return ['🧠 LeetCode: https://leetcode.com/vittesharora'];
       case 'clear':
         return [];
       default:
