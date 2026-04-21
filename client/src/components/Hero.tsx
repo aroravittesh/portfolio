@@ -381,6 +381,15 @@ export default function Hero() {
           curiosity and built with purpose.
         </motion.p>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+      >
+        <i className="fas fa-chevron-down text-cosmic-cyan text-2xl"></i>
+      </motion.div>
     </section>
   );
 }
