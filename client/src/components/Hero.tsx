@@ -162,6 +162,131 @@
 //     </section>
 //   );
 // }
+// import { motion } from "framer-motion";
+// import { useEffect, useState } from "react";
+// import { PERSONAL_INFO, TYPING_TEXTS } from "@/lib/constants";
+// import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+// import profilePic from "./e9a64050-4b15-4154-9fc3-14a853a365dc.jpg";
+
+// export default function Hero() {
+//   const [typingText, setTypingText] = useState("");
+//   const [currentTextIndex, setCurrentTextIndex] = useState(0);
+//   const [isDeleting, setIsDeleting] = useState(false);
+
+//   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.2 });
+
+//   useEffect(() => {
+//     const timeout = setTimeout(() => {
+//       const currentText = TYPING_TEXTS[currentTextIndex];
+//       if (isDeleting) {
+//         setTypingText(currentText.substring(0, typingText.length - 1));
+//         if (typingText === "") {
+//           setIsDeleting(false);
+//           setCurrentTextIndex((prev) => (prev + 1) % TYPING_TEXTS.length);
+//         }
+//       } else {
+//         setTypingText(currentText.substring(0, typingText.length + 1));
+//         if (typingText === currentText) {
+//           setTimeout(() => setIsDeleting(true), 2000);
+//         }
+//       }
+//     }, isDeleting ? 50 : 100);
+
+//     return () => clearTimeout(timeout);
+//   }, [typingText, currentTextIndex, isDeleting]);
+
+//   return (
+// <section id="home" ref={ref}className="min-h-[85vh] pt-12 pb-28 flex items-start justify-center relative overflow-hidden">
+//       <div className="container mx-auto px-6 text-center relative z-10">
+
+//         {/* Floating Laptop Image */}
+//         <motion.div
+//           initial={{ y: 50, opacity: 0 }}
+//           animate={isIntersecting ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+//           transition={{ duration: 0.8 }}
+//           className="animate-float"
+//         >
+//           <img 
+//             src={profilePic}
+//             className="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-cosmic-cyan animate-glow object-cover" 
+//           />
+//         </motion.div>
+
+//         {/* 👋 Greeting + Name */}
+//         <motion.h1
+//           initial={{ y: 40, opacity: 0 }}
+//           animate={isIntersecting ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
+//           transition={{ duration: 0.8 }}
+//           className="font-orbitron text-4xl md:text-5xl font-bold mb-4"
+//         >
+//           👋 Hi, I'm <span className="gradient-text">{PERSONAL_INFO.name}</span>
+//         </motion.h1>
+
+//         {/* Typing / Rolling Text */}
+//         <motion.div
+//           initial={{ y: 40, opacity: 0 }}
+//           animate={isIntersecting ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
+//           transition={{ duration: 0.8, delay: 0.2 }}
+//           className="text-xl md:text-2xl font-inter font-light h-16 flex items-center justify-center mb-4"
+//         >
+//           <span className="typing-cursor">{typingText}</span>
+//         </motion.div>
+
+//         {/* Big Main Line */}
+//         <motion.h2
+//           initial={{ y: 40, opacity: 0 }}
+//           animate={isIntersecting ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
+//           transition={{ duration: 0.8, delay: 0.4 }}
+//           className="text-3xl md:text-5xl font-bold gradient-text mb-4 leading-tight"
+//         >
+//           I build fast, scalable & meaningful web experiences.
+//         </motion.h2>
+
+//         {/* Supporting Paragraph */}
+//         <motion.p
+//           initial={{ y: 40, opacity: 0 }}
+//           animate={isIntersecting ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
+//           transition={{ duration: 0.8, delay: 0.6 }}
+//           className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto"
+//         >
+//           I’m a Full Stack Developer who blends logic and design to build products that are both performant and user-centric — driven by curiosity and built with purpose.
+//         </motion.p>
+//       </div>
+
+//       {/* Floating Decorative Dots */}
+//       <motion.div
+//         animate={{ y: [0, -20, 0] }}
+//         transition={{ duration: 6, repeat: Infinity, delay: 0.5 }}
+//         className="absolute top-20 left-10"
+//       >
+//         <div className="w-4 h-4 bg-cosmic-cyan rounded-full opacity-60"></div>
+//       </motion.div>
+//       <motion.div
+//         animate={{ y: [0, -25, 0] }}
+//         transition={{ duration: 8, repeat: Infinity, delay: 1 }}
+//         className="absolute bottom-32 right-16"
+//       >
+//         <div className="w-6 h-6 bg-cosmic-coral rounded-full opacity-40"></div>
+//       </motion.div>
+//       <motion.div
+//         animate={{ y: [0, -15, 0] }}
+//         transition={{ duration: 7, repeat: Infinity, delay: 1.5 }}
+//         className="absolute top-1/2 right-10"
+//       >
+//         <div className="w-3 h-3 bg-cosmic-teal rounded-full opacity-70"></div>
+//       </motion.div>
+
+//       {/* Scroll Indicator */}
+//       <motion.div
+//         animate={{ y: [0, 10, 0] }}
+//         transition={{ duration: 2, repeat: Infinity }}
+//         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+//       >
+//         <i className="fas fa-chevron-down text-cosmic-cyan text-2xl"></i>
+//       </motion.div>
+//     </section>
+//   );
+// }
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { PERSONAL_INFO, TYPING_TEXTS } from "@/lib/constants";
@@ -178,14 +303,17 @@ export default function Hero() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       const currentText = TYPING_TEXTS[currentTextIndex];
+
       if (isDeleting) {
         setTypingText(currentText.substring(0, typingText.length - 1));
+
         if (typingText === "") {
           setIsDeleting(false);
           setCurrentTextIndex((prev) => (prev + 1) % TYPING_TEXTS.length);
         }
       } else {
         setTypingText(currentText.substring(0, typingText.length + 1));
+
         if (typingText === currentText) {
           setTimeout(() => setIsDeleting(true), 2000);
         }
@@ -196,23 +324,25 @@ export default function Hero() {
   }, [typingText, currentTextIndex, isDeleting]);
 
   return (
-<section id="home" ref={ref}className="min-h-[85vh] pt-12 pb-28 flex items-start justify-center relative overflow-hidden">
+    <section
+      id="home"
+      ref={ref}
+      className="min-h-[85vh] pt-12 pb-28 flex items-start justify-center relative overflow-hidden"
+    >
       <div className="container mx-auto px-6 text-center relative z-10">
 
-        {/* Floating Laptop Image */}
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={isIntersecting ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
           transition={{ duration: 0.8 }}
           className="animate-float"
         >
-          <img 
+          <img
             src={profilePic}
-            className="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-cosmic-cyan animate-glow object-cover" 
+            className="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-cosmic-cyan animate-glow object-cover object-[22%_center]"
           />
         </motion.div>
 
-        {/* 👋 Greeting + Name */}
         <motion.h1
           initial={{ y: 40, opacity: 0 }}
           animate={isIntersecting ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
@@ -222,7 +352,6 @@ export default function Hero() {
           👋 Hi, I'm <span className="gradient-text">{PERSONAL_INFO.name}</span>
         </motion.h1>
 
-        {/* Typing / Rolling Text */}
         <motion.div
           initial={{ y: 40, opacity: 0 }}
           animate={isIntersecting ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
@@ -232,7 +361,6 @@ export default function Hero() {
           <span className="typing-cursor">{typingText}</span>
         </motion.div>
 
-        {/* Big Main Line */}
         <motion.h2
           initial={{ y: 40, opacity: 0 }}
           animate={isIntersecting ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
@@ -242,48 +370,17 @@ export default function Hero() {
           I build fast, scalable & meaningful web experiences.
         </motion.h2>
 
-        {/* Supporting Paragraph */}
         <motion.p
           initial={{ y: 40, opacity: 0 }}
           animate={isIntersecting ? { y: 0, opacity: 1 } : { y: 40, opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto"
         >
-          I’m a Full Stack Developer who blends logic and design to build products that are both performant and user-centric — driven by curiosity and built with purpose.
+          I’m a Full Stack Developer who blends logic and design to build
+          products that are both performant and user-centric — driven by
+          curiosity and built with purpose.
         </motion.p>
       </div>
-
-      {/* Floating Decorative Dots */}
-      <motion.div
-        animate={{ y: [0, -20, 0] }}
-        transition={{ duration: 6, repeat: Infinity, delay: 0.5 }}
-        className="absolute top-20 left-10"
-      >
-        <div className="w-4 h-4 bg-cosmic-cyan rounded-full opacity-60"></div>
-      </motion.div>
-      <motion.div
-        animate={{ y: [0, -25, 0] }}
-        transition={{ duration: 8, repeat: Infinity, delay: 1 }}
-        className="absolute bottom-32 right-16"
-      >
-        <div className="w-6 h-6 bg-cosmic-coral rounded-full opacity-40"></div>
-      </motion.div>
-      <motion.div
-        animate={{ y: [0, -15, 0] }}
-        transition={{ duration: 7, repeat: Infinity, delay: 1.5 }}
-        className="absolute top-1/2 right-10"
-      >
-        <div className="w-3 h-3 bg-cosmic-teal rounded-full opacity-70"></div>
-      </motion.div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-      >
-        <i className="fas fa-chevron-down text-cosmic-cyan text-2xl"></i>
-      </motion.div>
     </section>
   );
 }
