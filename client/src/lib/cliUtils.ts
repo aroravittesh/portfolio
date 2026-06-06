@@ -147,10 +147,13 @@ export const personalData = () => [
   ];
   
   export const education = () => [
-    '🎓 CISE Senior Certificate Program, Computer Science',
-    'University of Florida — May 2026',
+    '🎓 MS in Computer Science',
+    'University of Florida — Expected Dec 2027',
     '',
-    '🎓 B.Tech in CSE, Bennett University (2022 - 2026)',
+    '🎓 CISE Senior Certificate Program, Computer Science',
+    'University of Florida — (Jan 2026 - May 2026)',
+    '',
+    '🎓 B.Tech in CSE, Bennett University (Sep 2022 - Jun 2026)',
     'CGPA: 8.52',
     'Solved 380+ questions on LeetCode, GFG, and TUF+'
   ];  

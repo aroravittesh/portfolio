@@ -85,13 +85,24 @@ const Education = () => {
         transition={{ duration: 0.6, delay: 0.1 }}
         className="max-w-4xl mx-auto space-y-6"
       >
+           <div className="glass-dark rounded-2xl p-8 transition-all duration-500">
+          <h3 className="text-2xl font-bold font-orbitron uppercase tracking-wider gradient-text">
+            MS in Computer Science
+          </h3>
+          <p className="text-gray-300 text-sm font-medium mt-2">
+            University of Florida - Expected Dec 2027
+          </p>
+          <p className="text-gray-300 text-sm mt-1">
+            GPA: 3.77
+          </p>
+        </div>
 
 <div className="glass-dark rounded-2xl p-8 transition-all duration-500">
           <h3 className="text-2xl font-bold font-orbitron uppercase tracking-wider gradient-text">
             CISE Senior Certificate Program, Computer Science
           </h3>
           <p className="text-gray-300 text-sm font-medium mt-2">
-            University of Florida — May 2026
+            University of Florida — Jan 2026 to May 2026
           </p>
         </div>
         {/* Degree Card */}
@@ -100,7 +111,7 @@ const Education = () => {
             B.Tech in Computer Science Engineering
           </h3>
           <p className="text-gray-300 text-sm font-medium mt-2">
-            Bennett University — Expected June 2026
+            Bennett University — Sep 2022 to Jun 2026
           </p>
           <p className="text-gray-300 text-sm mt-1">
             CGPA: 8.52
