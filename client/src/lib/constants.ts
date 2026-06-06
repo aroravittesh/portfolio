@@ -13,7 +13,7 @@ export const PERSONAL_INFO = {
   linkedIn: "https://linkedin.com/in/vittesh-arora",
   github: "https://github.com/aroravittesh",
   leetcode: "https://leetcode.com/u/vittesharora",
-  resume: "https://drive.google.com/file/d/1AySuf-aQONOxnFr0eNV2Jz2FE2Iwt0mo/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/1BIGmYlPPFOnohTdzgOhQKfppf0Z1LBqr/view?usp=sharingg"
 };
 
 export const TYPING_TEXTS = [
