@@ -179,6 +179,7 @@ import Contact from "@/components/Contact";
 import WhatIDo from "@/components/WhatIDo";
 import Navigation from "@/components/Navigation"; // Mobile Nav
 import Education from "@/components/Education";
+import Experience from "@/components/Experience";
 import Extracurricular from "@/components/Extracurricular";
 import Terminal from "@/components/Terminal"; // CLI mode
 
@@ -227,6 +228,9 @@ export default function Home() {
             </section>
             <section id="whatido">
               <WhatIDo />
+            </section>
+            <section id="experience">
+              <Experience />
             </section>
             <section id="projects">
               <Projects />

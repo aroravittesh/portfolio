@@ -92,6 +92,9 @@ const Education = () => {
           <p className="text-gray-300 text-sm font-medium mt-2">
             University of Florida - Expected Dec 2027
           </p>
+          <p className="text-gray-300 text-sm font-medium mt-2">
+            Gainesville, Florida, United States
+          </p>
           <p className="text-gray-300 text-sm mt-1">
             GPA: 3.77
           </p>
@@ -104,6 +107,9 @@ const Education = () => {
           <p className="text-gray-300 text-sm font-medium mt-2">
             University of Florida — Jan 2026 to May 2026
           </p>
+          <p className="text-gray-300 text-sm font-medium mt-2">
+            Gainesville, Florida, United States
+          </p>
         </div>
         {/* Degree Card */}
         <div className="glass-dark rounded-2xl p-8 transition-all duration-500">
@@ -112,6 +118,9 @@ const Education = () => {
           </h3>
           <p className="text-gray-300 text-sm font-medium mt-2">
             Bennett University — Sep 2022 to Jun 2026
+          </p>
+          <p className="text-gray-300 text-sm font-medium mt-2">
+            Greater Noida, UP, India
           </p>
           <p className="text-gray-300 text-sm mt-1">
             CGPA: 8.52

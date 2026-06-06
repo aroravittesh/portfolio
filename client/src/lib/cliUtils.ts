@@ -146,14 +146,26 @@ export const personalData = () => [
     'Expertise: DSA, OOPS, SE, OS, REST APIs, ML Basics'
   ];
   
+  export const experience = () => [
+    '💼 Software Developer Intern — RePut.ai',
+    'Bengaluru, Karnataka, India | June 2026 – Present',
+    '',
+    '• Engineered an enterprise carbon accounting platform for Scope 1–3 emissions tracking with Angular dashboards featuring plant-wise analytics, scope breakdowns, multi-facility management, and sustainability reporting.',
+    '• Designed and maintained 100+ REST APIs using Node.js, Express.js, and PostgreSQL for multi-tenant operations, JWT/MFA authentication, role-based access control, and AWS S3/SES integrations.',
+    '• Delivered ESG compliance capabilities (BRSR, GRI, TCFD, SASB, CBAM, PCF) with AI-powered emission-factor enrichment via OpenAI, anomaly detection, hotspot analysis, and automated forecasting workflows.'
+  ];
+
   export const education = () => [
     '🎓 MS in Computer Science',
     'University of Florida — Expected Dec 2027',
+    'Gainesville, Florida, United States',
     '',
     '🎓 CISE Senior Certificate Program, Computer Science',
     'University of Florida — (Jan 2026 - May 2026)',
+    'Gainesville, Florida, United States',
     '',
     '🎓 B.Tech in CSE, Bennett University (Sep 2022 - Jun 2026)',
+    'Greater Noida, UP, India',
     'CGPA: 8.52',
     'Solved 380+ questions on LeetCode, GFG, and TUF+'
   ];  

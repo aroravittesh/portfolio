@@ -22,6 +22,7 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
     { id: "whatido", label: "What I Do" },
     { id: "projects", label: "Projects" },
     { id: "skills", label: "Skills" },
+    { id: "experience", label: "Experience" },
     { id: "education", label: "Education" },
     { id: "extracurricular", label: "Extracurricular" },
     { id: "contact", label: "Contact" }

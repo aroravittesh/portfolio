@@ -3,6 +3,7 @@ import {
     getWhatIDo,
     getProjectDetails,
     skills,
+    experience,
     education,
     extras,
     contact
@@ -15,6 +16,7 @@ import {
     'projects',
     'project <name>',
     'skills',
+    'experience',
     'education',
     'extracurriculars',
     'contact',
@@ -50,6 +52,8 @@ import {
         return getProjectDetails(argStr);
       case 'skills':
         return skills();
+      case 'experience':
+        return experience();
       case 'education':
         return education();
       case 'extracurriculars':

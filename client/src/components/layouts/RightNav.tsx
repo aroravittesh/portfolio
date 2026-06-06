@@ -4,6 +4,7 @@ import ParticleBackground from "@/components/ParticleBackground";
 const sections = [
   "About",
   "What I Do",
+  "Experience",
   "Projects",
   "Skills",
   "Education",
