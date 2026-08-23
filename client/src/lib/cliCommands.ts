@@ -46,7 +46,7 @@ import {
           '→ project echoes',
           '→ project cookie',
           '→ project flex',
-          '→ project matrix'
+          '→ project aurex'
         ];
       case 'project':
         return getProjectDetails(argStr);
@@ -61,7 +61,7 @@ import {
       case 'contact':
         return contact();
       case 'get-resume':
-        return ['📄 Resume: https://drive.google.com/file/d/1BIGmYlPPFOnohTdzgOhQKfppf0Z1LBqr/view?usp=sharingg'];
+        return ['📄 Resume: https://drive.google.com/file/d/1g4BI788ggS4YQl51LuT2C37bnnfRtsRJ/view?usp=sharing'];
       case 'get-github':
         return ['🔗 GitHub: https://github.com/aroravittesh'];
       case 'get-linkedin':

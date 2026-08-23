@@ -19,6 +19,7 @@ export default function Projects() {
       "AI Chatbot": "text-cosmic-coral",
       "E-commerce": "text-indigo-400",
       "Health & Wellness": "text-rose-400",
+      "FinTech": "text-emerald-400",
     };
   
     return colors[category] || "text-gray-700";
@@ -38,6 +39,11 @@ export default function Projects() {
       "SharePoint": "blue-400",
       "PostgreSQL": "indigo-400",
       "Facebook Prophet": "orange-400",
+      "Angular": "red-400",
+      "TypeScript": "blue-400",
+      "Go": "cyan-400",
+      "Python": "yellow-400",
+      "Docker": "blue-400",
     };
   
     return colors[tech] || "gray-400";
@@ -95,6 +101,7 @@ export default function Projects() {
       project.category === 'AI Chatbot' ? 'fa-robot' :
       project.category === 'E-commerce' ? 'fa-store' :
       project.category === 'Health & Wellness' ? 'fa-heartbeat' :
+      project.category === 'FinTech' ? 'fa-chart-line' :
       'fa-cube'
     } ${getCategoryColor(project.category)} mr-2`}></i>
 
@@ -141,7 +148,11 @@ export default function Projects() {
     {/* GitHub Repo */}
     <a
       href={`https://github.com/aroravittesh/${
-        project.title === "Sanchaya" ? "GreenRoute" : formatRepoName(project.title)
+        project.title === "Sanchaya"
+          ? "GreenRoute"
+          : project.title === "Aurex"
+            ? "wealthscope"
+            : formatRepoName(project.title)
       }`}
       target="_blank"
       rel="noopener noreferrer"

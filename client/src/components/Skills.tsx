@@ -111,7 +111,9 @@ export default function Skills() {
                       <img
                         src={skill.icon}
                         alt={`${skill.name} logo`}
-                        className="w-5 h-5 object-contain"
+                        className={`w-5 h-5 object-contain ${
+                          skill.icon.includes("simple-icons") ? "invert" : ""
+                        }`}
                       />
                     )}
                     {skill.name}

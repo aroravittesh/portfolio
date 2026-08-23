@@ -13,14 +13,14 @@ export const PERSONAL_INFO = {
   linkedIn: "https://linkedin.com/in/vittesh-arora",
   github: "https://github.com/aroravittesh",
   leetcode: "https://leetcode.com/u/vittesharora",
-  resume: "https://drive.google.com/file/d/1BIGmYlPPFOnohTdzgOhQKfppf0Z1LBqr/view?usp=sharingg"
+  resume: "https://drive.google.com/file/d/1g4BI788ggS4YQl51LuT2C37bnnfRtsRJ/view?usp=sharing"
 };
 
 export const TYPING_TEXTS = [
   "Full Stack Developer",
-  "MERN Stack Specialist", 
+  "MERN Stack Specialist",
   "Problem Solver",
-  "Tech Innovator"
+  "AI Agent Developer",
 ];
 
 export const SKILLS = [
@@ -125,6 +125,36 @@ skills: [
 ],
 
 
+  },
+  {
+    category: "AI & Agentic Systems",
+    icon: "fas fa-robot",
+    skills: [
+      {
+        name: "LangChain",
+        icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v14/icons/langchain.svg",
+      },
+      {
+        name: "LangGraph",
+        icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v14/icons/langgraph.svg",
+      },
+      {
+        name: "RAG",
+        icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v14/icons/huggingface.svg",
+      },
+      {
+        name: "AI Agents",
+        icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v14/icons/openai.svg",
+      },
+      {
+        name: "Tool Calling",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+      },
+      {
+        name: "MCP",
+        icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v14/icons/anthropic.svg",
+      },
+    ],
   },
   {
     category: "Technical Expertise",
@@ -259,27 +289,27 @@ export const PROJECTS = [
     color: "rose"
   },
   {
-    id: "matrix",
-    title: "MATRIX",
-    subtitle: "Electronics Rental E-commerce Platform",
-    description: "A scalable e-commerce platform designed for renting electronics like laptops, smartphones, and cameras. Matrix helps users access devices affordably while allowing vendors to manage inventory, pricing, and availability dynamically.",
-    image: "https://images.unsplash.com/photo-1586171680404-d9376632f9e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=eyJhcHBfaWQiOjEyMDd9&ixlib=rb-1.2.1&q=80&w=1080",
-    technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
+    id: "aurex",
+    title: "Aurex",
+    subtitle: "Stock Portfolio Intelligence Platform",
+    description: "A full-stack Stock Portfolio Intelligence Platform demonstrating real-world software engineering — modular Go REST APIs, Angular frontend, PostgreSQL, and Python ML services for portfolio management, holdings tracking, and data-driven analytics.",
+    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400&q=80&crop=entropy&cs=tinysrgb",
+    technologies: ["Angular", "TypeScript", "Go", "PostgreSQL", "Python", "Docker"],
     features: [
-      "Browse and rent electronics on-demand",
-      "Dynamic product management system",
-      "Real-time inventory and availability tracking",
-      "Secure user authentication and checkout",
-      "Admin panel for vendor control"
+      "User authentication with JWT",
+      "Portfolio and holdings management",
+      "Portfolio performance analytics",
+      "ML-based portfolio insights",
+      "Modular REST API architecture"
     ],
     highlights: [
-      "Cost-effective electronics access",
-      "Built using full MERN stack",
-      "Responsive and intuitive UI/UX",
-      "Supports multi-device inventory"
+      "Production-style system design with clean Go backend",
+      "Angular frontend with scalable component architecture",
+      "PostgreSQL relational database with structured schema",
+      "Docker, CI/CD, and Cypress-tested deployment pipeline"
     ],
-    category: "E-commerce",
-    color: "indigo"
+    category: "FinTech",
+    color: "emerald"
   }
   
   

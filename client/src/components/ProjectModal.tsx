@@ -111,6 +111,26 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         bg: "bg-orange-400/20",
         text: "text-orange-400",
         border: "border-orange-400/30"
+      },
+      "Angular": {
+        bg: "bg-red-400/20",
+        text: "text-red-400",
+        border: "border-red-400/30"
+      },
+      "TypeScript": {
+        bg: "bg-blue-400/20",
+        text: "text-blue-400",
+        border: "border-blue-400/30"
+      },
+      "Go": {
+        bg: "bg-cyan-400/20",
+        text: "text-cyan-400",
+        border: "border-cyan-400/30"
+      },
+      "Docker": {
+        bg: "bg-blue-400/20",
+        text: "text-blue-400",
+        border: "border-blue-400/30"
       }
     };
   
@@ -127,6 +147,9 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   const getGithubLink = (title: string) => {
     if (title.toUpperCase() === "SANCHAYA") {
       return "https://github.com/aroravittesh/GreenRoute";
+    }
+    if (title.toUpperCase() === "AUREX") {
+      return "https://github.com/aroravittesh/wealthscope";
     }
     return `https://github.com/aroravittesh/${title.toLowerCase().replace(/\s+/g, "-")}`;
   };

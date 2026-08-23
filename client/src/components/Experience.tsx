@@ -35,7 +35,7 @@ const Experience = () => {
             RePut.ai — Bengaluru, Karnataka, India
           </p>
           <p className="text-gray-400 text-sm mt-1">
-            June 2026 – Present
+            June 2026 – August 2026
           </p>
           <ul className="list-disc list-inside mt-4 space-y-2 text-gray-300 text-sm">
             <li>
@@ -45,9 +45,10 @@ const Experience = () => {
               sustainability reporting.
             </li>
             <li>
-              Designed and maintained 100+ REST APIs using Node.js, Express.js,
-              and PostgreSQL for multi-tenant operations, JWT/MFA authentication,
-              role-based access control, and AWS S3/SES integrations.
+              Designed and maintained 100+ REST API endpoints using Node.js,
+              Express.js, and PostgreSQL for multi-tenant operations, JWT/MFA
+              authentication, role-based access control, and AWS S3/SES
+              integrations.
             </li>
             <li>
               Delivered ESG compliance capabilities (BRSR, GRI, TCFD, SASB, CBAM,

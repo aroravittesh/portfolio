@@ -1,9 +1,11 @@
 // --- cliUtils.ts ---
 export const personalData = () => [
-    "👋 I'm Vittesh Arora, a Full Stack Developer.",
-    'Driven by curiosity and built with purpose.',
-    'Passionate about fast, scalable & meaningful web experiences.'
-  ];
+  "👋 Hi, I'm Vittesh Arora.",
+  "Full Stack Developer | MERN Stack Specialist | Problem Solver | AI Agent Developer",
+  "I build fast, scalable & meaningful web experiences.",
+  "As a Full Stack Developer, I build scalable web and mobile apps with clean engineering and user-first design.",
+  "Beyond the stack, I work in agentic AI — LangChain, LangGraph, RAG, tool calling, and MCP — to build intelligent, context-aware workflows."
+];
   
   export const getWhatIDo = () => `
   WHAT I DO
@@ -14,13 +16,16 @@ export const personalData = () => [
   1. SOFTWARE ENGINEERING
      Experience in building scalable and efficient software systems with modern engineering practices.
   
-  2. WEB DEVELOPMENT
+  2. AGENTIC AI
+     Designing intelligent agents and workflows with LangChain, LangGraph, RAG, tool calling, and MCP — from retrieval-augmented pipelines to autonomous, context-aware applications.
+  
+  3. WEB DEVELOPMENT
      Proficient in crafting responsive, dynamic websites and web apps using React, Next.js, and modern tooling.
   
-  3. FRONTEND
+  4. FRONTEND
      Skilled in creating intuitive, accessible user interfaces with pixel-perfect design and interactivity.
   
-  4. BACKEND
+  5. BACKEND
      Capable of building REST APIs, handling databases, and managing server-side logic using Node.js and Supabase.
   `;
   
@@ -115,26 +120,29 @@ export const personalData = () => [
         `- Tailored for multiple body types`,
         `- Built with full MERN architecture`
       ],
-      matrix: [
-        `Matrix (E-commerce Web App)`,
-        `→ Electronics Rental Platform`,
-        `→ Built using React.js, Node.js, Express.js, MongoDB`,
+      aurex: [
+        `Aurex (Stock Portfolio Intelligence Platform)`,
+        `→ Full-stack platform for portfolio management, holdings tracking, and ML-driven analytics`,
+        `→ Built using Angular, TypeScript, Go, Gorilla Mux, PostgreSQL, Python, Docker, CI/CD`,
         ``,
         `Features:`,
-        `- Rent electronics like phones, laptops, cameras`,
-        `- Dynamic product management system`,
-        `- Real-time availability & inventory tracking`,
-        `- Secure checkout and login`,
+        `- User authentication (JWT)`,
+        `- Portfolio management`,
+        `- Holdings tracking`,
+        `- Portfolio analytics`,
+        `- ML-based insights`,
         ``,
         `Highlights:`,
-        `- Cost-effective rental experience`,
-        `- MERN stack powered`,
-        `- Clean and responsive UI`,
-        `- Admin dashboard for vendors`
+        `- Modular Go REST API architecture`,
+        `- Angular frontend with PostgreSQL backend`,
+        `- Python ML service integration`,
+        `- Docker & CI/CD deployment pipeline`,
+        `- GitHub:`,
+        `  https://github.com/aroravittesh/wealthscope`,
       ]
     };
   
-    return projects[name.toLowerCase()] || ["❌ Project not found. Try: sanchaya, carbonmitra, echoes, cookie, flex, or matrix."];
+    return projects[name.toLowerCase()] || ["❌ Project not found. Try: sanchaya, carbonmitra, echoes, cookie, flex, or aurex."];
   };
   
   
@@ -143,31 +151,31 @@ export const personalData = () => [
     'Frameworks: React.js, React Native, Node.js, Express.js, Next.js, Tailwind',
     'Databases: MySQL, MongoDB, PostgreSQL',
     'Cloud & Tools: AWS, GCP, Git, GitHub, VS Code, MS Office',
+    'AI & Agentic Systems: LangChain, LangGraph, RAG, AI Agents, Tool Calling, MCP',
     'Expertise: DSA, OOPS, SE, OS, REST APIs, ML Basics'
   ];
   
   export const experience = () => [
     '💼 Software Developer Intern — RePut.ai',
-    'Bengaluru, Karnataka, India | June 2026 – Present',
+    'Bengaluru, Karnataka, India | June 2026 – August 2026',
     '',
     '• Engineered an enterprise carbon accounting platform for Scope 1–3 emissions tracking with Angular dashboards featuring plant-wise analytics, scope breakdowns, multi-facility management, and sustainability reporting.',
-    '• Designed and maintained 100+ REST APIs using Node.js, Express.js, and PostgreSQL for multi-tenant operations, JWT/MFA authentication, role-based access control, and AWS S3/SES integrations.',
+    '• Designed and maintained 100+ REST API endpoints using Node.js, Express.js, and PostgreSQL for multi-tenant operations, JWT/MFA authentication, role-based access control, and AWS S3/SES integrations.',
     '• Delivered ESG compliance capabilities (BRSR, GRI, TCFD, SASB, CBAM, PCF) with AI-powered emission-factor enrichment via OpenAI, anomaly detection, hotspot analysis, and automated forecasting workflows.'
   ];
 
   export const education = () => [
     '🎓 MS in Computer Science',
-    'University of Florida — Expected Dec 2027',
+    'University of Florida — January 2026 to December 2027',
     'Gainesville, Florida, United States',
+    'GPA: 3.77',
     '',
-    '🎓 CISE Senior Certificate Program, Computer Science',
-    'University of Florida — (Jan 2026 - May 2026)',
-    'Gainesville, Florida, United States',
-    '',
-    '🎓 B.Tech in CSE, Bennett University (Sep 2022 - Jun 2026)',
+    '🎓 B.Tech in Computer Science Engineering',
+    'Bennett University — Sep 2022 to Jun 2026',
     'Greater Noida, UP, India',
     'CGPA: 8.52',
-    'Solved 380+ questions on LeetCode, GFG, and TUF+'
+    '',
+    'Solved 380+ questions on LeetCode, TUF+, and GFG'
   ];  
   
   export const extras = () => [

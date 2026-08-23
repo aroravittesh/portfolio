@@ -102,6 +102,11 @@ const skills = [
       "Experience in building scalable and efficient software systems with modern engineering practices."
   },
   {
+    title: "AGENTIC AI",
+    description:
+      "Designing intelligent agents and workflows with LangChain, LangGraph, RAG, tool calling, and MCP — from retrieval-augmented pipelines to autonomous, context-aware applications."
+  },
+  {
     title: "WEB DEVELOPMENT",
     description:
       "Proficient in crafting responsive, dynamic websites and web apps using React, Next.js, and modern tooling."
@@ -169,7 +174,7 @@ export default function WhatIDo() {
               className="overflow-hidden"
               initial={false}
               animate={{
-                maxHeight: hoveredIndex === index ? 200 : 0,
+                maxHeight: hoveredIndex === index ? 240 : 0,
                 opacity: hoveredIndex === index ? 1 : 0
               }}
               transition={{ duration: 0.4, ease: "easeInOut" }}

@@ -166,7 +166,7 @@
 // import { useEffect, useState } from "react";
 // import { PERSONAL_INFO, TYPING_TEXTS } from "@/lib/constants";
 // import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
-// import profilePic from "./e9a64050-4b15-4154-9fc3-14a853a365dc.jpg";
+// import profilePic from "./me.png";
 
 // export default function Hero() {
 //   const [typingText, setTypingText] = useState("");
@@ -291,7 +291,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { PERSONAL_INFO, TYPING_TEXTS } from "@/lib/constants";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
-import profilePic from "./e9a64050-4b15-4154-9fc3-14a853a365dc.jpg";
+import profilePic from "./me.png";
 
 export default function Hero() {
   const [typingText, setTypingText] = useState("");
@@ -335,12 +335,15 @@ export default function Hero() {
           initial={{ y: 50, opacity: 0 }}
           animate={isIntersecting ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="animate-float"
+          className="animate-float flex justify-center mb-8"
         >
-          <img
-            src={profilePic}
-            className="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-cosmic-cyan animate-glow object-cover object-[22%_center]"
-          />
+          <div className="w-32 h-32 rounded-full border-4 border-cosmic-cyan animate-glow overflow-hidden">
+            <img
+              src={profilePic}
+              alt={PERSONAL_INFO.name}
+              className="h-full w-full object-cover scale-[1.4] translate-x-[calc(-0.75rem+7%)]"
+            />
+          </div>
         </motion.div>
 
         <motion.h1
@@ -349,7 +352,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="font-orbitron text-4xl md:text-5xl font-bold mb-4"
         >
-          👋 Hi, I'm <span className="gradient-text">{PERSONAL_INFO.name}</span>
+          Hi, I'm <span className="gradient-text">{PERSONAL_INFO.name}</span>
         </motion.h1>
 
         <motion.div
@@ -376,9 +379,10 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto"
         >
-          I’m a Full Stack Developer who blends logic and design to build
-          products that are both performant and user-centric — driven by
-          curiosity and built with purpose.
+          As a Full Stack Developer, I build scalable web and mobile apps
+          with clean engineering and user-first design. Beyond the stack, I
+          work in agentic AI — LangChain, LangGraph, RAG, tool calling, and
+          MCP — to build intelligent, context-aware workflows.
         </motion.p>
       </div>
 

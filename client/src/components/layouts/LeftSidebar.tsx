@@ -23,7 +23,7 @@ const LeftSidebar = () => (
 
     {/* Resume button pinned at bottom */}
     <a
-      href="https://drive.google.com/file/d/1BIGmYlPPFOnohTdzgOhQKfppf0Z1LBqr/view?usp=sharingg"
+      href="https://drive.google.com/file/d/1g4BI788ggS4YQl51LuT2C37bnnfRtsRJ/view?usp=sharing"
       target="_blank"
       rel="noopener noreferrer"
       className="mt-auto mb-2 w-10 h-10 flex items-center justify-center rounded-full bg-cosmic-cyan hover:bg-cosmic-cyan/90 transition-all duration-300 shadow-md"

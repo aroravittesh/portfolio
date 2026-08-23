@@ -64,11 +64,11 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-gray-300">{PERSONAL_INFO.phone}</p>
+                    <p className="text-gray-300">{PERSONAL_INFO.phone1}</p>
                   </div>
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-gray-300">{PERSONAL_INFO.phone1}</p>
+                    <p className="text-gray-300">{PERSONAL_INFO.phone}</p>
                   </div>
                 </motion.div>
 
